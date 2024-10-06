@@ -1,0 +1,12 @@
+package-lock.json
+node_modules/
+.DS_Store
+
+task-v1-be/node_modules/
+task-v1-be/.env
+task-v1-be/package-lock.json
+
+task-v1-fe/node_modules/
+task-v1-fe/.next/
+task-v1-fe/.env.local
+task-v1-fe/package-lock.json

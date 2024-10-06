@@ -1,0 +1,20 @@
+{
+  "name": "task-v1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "backend": "npm start -w task-v1-be",
+    "frontend": "npm run dev -w task-v1-fe",
+    "start": "concurrently \"npm run backend\" \"npm run frontend\"",
+    "i-frontend": "npm install -w task-v1-fe",
+    "i-backend": "npm install -w task-v1-be",
+    "seeds": "ts-node seeds/index.ts -w task-v1-be"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "workspaces": ["task-v1-be", "task-v1-fe"],
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}
