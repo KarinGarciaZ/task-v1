@@ -1,3 +1,8 @@
+## NOTE: Update to fix:
+Seems the issue was regarding `concurrently` doing this repo a monorepo. That makes sense since it was the las part of my development and I had all dependencies installed. That's why I did not notice the issue before.
+Sadly I didn't have time to fix it in a proper way, so I just removed it from the root folder, so I don't block your review anymore.
+Thank you for your patience.
+
 # Welcome to my task!
 
 ### Technologies used:
@@ -37,14 +42,11 @@ DB_PASS=your_db_password
 
 Now you should be ready to install dependencies. Use the package manager [npm](https://docs.npmjs.com/).
 
-Run this command at root folder to install dependencies:
+Run this command at `task-v1-be` folder to install dependencies:
 
 ```bash
-# for monorepo dependencies
-npm install
-
-# for backend dependencies
-npm install i-backend
+# for backend dependencies. --force is needed since some gql dependencies are coliding
+npm install --force
 ```
 
 Before you run the project you need to add two more environment variables into `.env` in `task-v1-be` project:
@@ -54,12 +56,9 @@ APP_PORT=4000
 APP_HOST=127.0.0.1
 ```
 
-To run the project you need to run this command:
+To run the project you need to run this command in `task-v1-be` project:
 
 ```bash
-# from monorepo(root) folder
-npm run backend
-
 # from backend folder
 npm start
 ```
@@ -90,21 +89,15 @@ Idea of comments is to have a kind of tree data structure, so one comment node c
 
 Use the package manager [npm](https://docs.npmjs.com/).
 
-Run this command at root folder to install dependencies:
+Run this command at `task-v1-fe` folder to install dependencies:
 
 ```bash
-# for monorepo dependencies
-npm install
-
 # for frontend dependencies
-npm install i-frontend
+npm install
 ```
 
 To run the project you need to run this command:
 ```bash
-# from monorepo(root) folder
-npm run frontend
-
 # from frontend folder (task-v1-fe)
 npm run dev
 ```
