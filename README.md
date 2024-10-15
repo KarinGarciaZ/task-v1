@@ -1,5 +1,5 @@
 ## NOTE: Update to fix:
-Seems the issue was regarding `concurrently` doing this repo a monorepo. That makes sense since it was the las part of my development and I had all dependencies installed. That's why I did not notice the issue before.
+Seems the issue was regarding `concurrently` doing this repo a monorepo. That makes sense since it was the last part of my development and I had all dependencies installed. That's why I did not notice the issue before.
 Sadly I didn't have time to fix it in a proper way, so I just removed it from the root folder, so I don't block your review anymore.
 Thank you for your patience.
 
